@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+<!--Daqui até-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERMINAL</title>
+  <link rel="shortcut icon" type="image/png" href="media/icon.png">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<audio id="whitenoise" src="media/wht.mp3" autoplay loop></audio>
+
+<audio id="tec" src="media/kbsfx.mp3"></audio>
+
+<audio id="billie" src="songs/Billie Holiday - Easy Living.mp3" loop></audio>
+<audio id="boogiee" src="songs/Boogie Man - Sid Phillips.mp3" loop></audio>
+<audio id="fox" src="songs/Fox Boogie - Gerhard Trede.mp3" loop></audio>
+<audio id="inkspots" src="songs/I Don't Want To Set The World On Fire-The Ink Spots.mp3" loop></audio>
+
+<body class="bg-cover" style="background-image:url('media/bkg.png')">
+  <!--aqui, não é bom mexer-->
+
+  <div class="absolute top-5 right-10">
+    <div id="clock2" class="hidden bg-clip-text select-none
+  text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323
+  text-3xl font-bold animate-pulse underline decoration-green-500" onload="currentTime()">
+    </div>
+  </div>
+
+  <div class="absolute top-1/3 right-10">
+    <div id="helpfix" class="hidden bg-clip-text select-none
+  text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323
+  text-xl font-bold animate-pulse underline decoration-green-500">
+      <h1>/help/Sessão de comandos<br>
+        /songs/Galeria de música<br>
+        /time/Horário local<br>
+        /logoff/Desloga da conta
+      </h1>
+
+    </div>
+  </div>
+
+  <!--Daqui pra baixo é a tela de Login-->
+
+  <div class="relative top-8 left-24 w-11/12 ">
+    <h1 class="sticky text-5xl animate-pulse font-vt323 font-bold underline bg-clip-text
+   text-transparent bg-gradient-to-r from-green-400 to-green-700 select-none">
+      &lt;Bem vindo!&gt;
+    </h1>
+    <div class="text-2xl font-vt323 bg-clip-text
+   text-transparent bg-gradient-to-r from-green-400 to-green-700 select-none">
+      <h1><br></h1>
+      <div class="">
+        <label class=""> Login: </label>
+        <input type="text" id="logininit" name="logininit" class="bg-clip-text
+    text-transparent bg-gradient-to-r from-green-400 to-green-700 select-none
+     focus:outline-none underline decoration-green-400 " placeholder="&lt;-----&gt;"><br>
+      </div>
+      <div>
+        <label class=""> Senha: </label>
+        <input type="password" id="passinit" name="passinit" class="bg-clip-text
+    text-transparent bg-gradient-to-r from-green-400 to-green-700 select-none
+     focus:outline-none underline decoration-green-400
+    " placeholder="&lt;-----&gt;">
+        <p><br></p>
+        <div class="h-10 w-20">
+          <p id="btninit" class=" hover:cursor-pointer font-bold"> &lt;Enviar&gt; </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Aqui é depois da senha e do login-->
+
+    <div class="hidden w-11/12 select-none bg-clip-text text-3xl font-vt323
+  text-transparent bg-gradient-to-r from-green-400 to-green-700 
+  relative top-8 underline" id="infoblock">
+      <div id="prop" class="relative left-10 bottom-32">
+        <p id="anime" class="absolute left-2/4 font-vt323 font-bold bg-clip-text
+        text-transparent bg-gradient-to-r from-green-400 to-green-700 text-xl">
+          く__,.ヘヽ.　　　　/　,ー､ 〉<br>
+          　　　　　＼ ', !-─‐-i　/　/´<br>
+          　　　 　 ／｀ｰ'　　　 L/／｀ヽ､<br>
+          　　 　 /　 ／,　 /|　 ,　 ,　　　 ',<br>
+          　　　ｲ 　/ /-‐/　ｉ　L_ ﾊ ヽ!　 i<br>
+          　　　 ﾚ ﾍ 7ｲ｀ﾄ　 ﾚ'ｧ-ﾄ､!ハ|　 |<br>
+          　　　　 !,/7 '0'　　 ´0iソ| 　 |　　　<br>
+          　　　　 |.从"　　_　　 ,,,, / |./ 　 |<br>
+          　　　　 ﾚ'| i＞.､,,__　_,.イ / 　.i 　|<br>
+          　　　　　 ﾚ'| | / k_７_/ﾚ'ヽ,　ﾊ.　|<br>
+          　　　　　　 | |/i 〈|/　 i　,.ﾍ |　i　|<br>
+          　　　　　　.|/ /　ｉ： 　 ﾍ!　　＼　|<br>
+          　　　 　 　 kヽ>､ﾊ 　 _,.ﾍ､ 　 /､!<br>
+          　　　　　　 !'〈//｀Ｔ´', ＼ ｀'7'ｰr'<br>
+          　　　　　　 ﾚ'ヽL__|___i,___,ンﾚ|ノ<br>
+          　　　　　 　　　ﾄ-,/　|___./<br>
+          　　　　　 　　　'ｰ'　　!_,.:<br>
+        </p>
+      </div>
+      <h1>Olá de novo! Oque deseja para hoje? :)</h1>
+      <h2>Digite "help" para ajuda.</h2>
+    </div>
+    <div id="getdiv" class="relative hidden bg-clip-text select-none
+    text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323
+    text-3xl">
+      <label class=" hover:cursor-pointer underline-offset-1 
+      decoration-green-500 font-bold" id="getg"><br> &lt;get&gt;</label>
+      <input type="text" id="getobj" name="getobj" class="bg-clip-text
+    text-transparent bg-gradient-to-r from-green-400 to-green-700
+    select-none focus:outline-none underline decoration-green-400 " placeholder="&lt;-----&gt;">
+    </div>
+
+    <!-- <get> help -->
+    <div id="opt" class="hidden bg-clip-text select-none
+    text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323
+    text-2xl ">
+
+      <p><br><br> /help/......Exibe o menu de comandos;</p>
+      <p> /songs/.....Abre a galeria de música</p>
+      <p> /time/.....Mostra o relógio em tempo real;</p>
+      <p> /logoff/...Desloga da conta;</p>
+      <p><br>Fixar na lateral <span class="font-bold">&lt;<span id="fixon"
+        class="hover:cursor-pointer decoration-green-500">on</span>/<span id="fixoff"
+        class="hover:cursor-pointer underline decoration-green-500">off</span>&gt;</p>
+
+    </div>
+
+    <!-- <get> songs -->
+    <div id="songsaba" class="hidden bg-clip-text select-none
+    text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323
+    text-2xl ">
+
+      <div id="prop2" class="relative left-5 bottom-32">
+        <p id="anime" class=" absolute left-1/3 font-vt323 font-bold bg-clip-text
+      text-transparent bg-gradient-to-r from-green-400 to-green-700 text-xl">
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡟⠷⣶⣤⠀⠀⠀⠀⠀<br>
+          ⠀⠀⠀⢸⠟⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣼⡇⢀⣸⡇⠀⠀⠀⠀⠀<br>
+          ⠀⠀⠀⠘⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠿⠿⠻⣿⣿⡿⠀⠀⠀⠀⠀<br>
+          ⠀⠀⠀⣾⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+          ⠀⠀⠀⠈⠉⠀⠀⠀⠀⣿⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+          ⠀⢀⣀⣀⣀⣀⣀⣀⣀⣉⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣉⣀⣀⣀⣀⣀⣀⣀⡀⠀<br>
+          ⠀⢸⣿⣿⣉⣉⣉⣹⣿⣿⣏⣉⣉⣉⣉⣉⣉⣉⣉⣹⣿⣿⣏⣉⣉⣉⣿⣿⡇⠀<br>
+          ⠀⢸⣿⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣿⡇⠀<br>
+          ⠀⢸⣿⡿⠋⣉⣭⣍⡙⢿⣿⡏⢉⣭⣭⣭⣭⡉⢹⣿⡿⢋⣩⣭⣉⠙⢿⣿⡇⠀<br>
+          ⠀⢸⡟⢠⣾⠟⠛⠻⣿⣆⠹⡇⢸⣿⣿⣿⣿⡇⢸⠏⣰⣿⠟⠛⠻⣷⡄⢻⡇⠀<br>
+          ⠀⢸⡇⢸⣿⡀⠛⢀⣿⡿⢀⣧⣤⣤⣤⣤⣤⣤⣼⡀⢿⣿⡀⠛⢀⣿⡇⢸⡇⠀<br>
+          ⠀⢸⣿⣄⠙⠿⣿⡿⠟⣡⣾⣿⡏⢹⡏⢹⡏⢹⣿⣷⣌⠻⢿⣿⠿⠋⣠⣿⡇⠀<br>
+          ⠀⠸⠿⠿⠷⠶⠶⠶⠾⠿⠿⠿⠿⠾⠿⠿⠷⠿⠿⠿⠿⠷⠶⠶⠶⠾⠿⠿⠇⠀<br>
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+        </p>
+      </div>
+
+      <h1><br>Processando...<br></h1>
+      <h2>...ProjetoFallout/src/songs ></h2>
+      <p><br> /1/...boogieman.mp3;</p>
+      <p> /2/...theinkspots.mp3</p>
+      <p> /3/...gerhardtrede.mp3;</p>
+      <p> /4/...easyliving.mp3; </p>
+      <p id="stop" class="font-bold cursor-pointer"> &lt;stop&gt;</p>
+      <label class=" hover:cursor-pointer underline-offset-1 
+      decoration-green-500 font-bold" id="getsongbtn"> &lt;getsong&gt;</label>
+      <input type="text" id="getsong" name="getsong" class="bg-clip-text
+    text-transparent bg-gradient-to-r from-green-400 to-green-700
+    select-none focus:outline-none underline decoration-green-400 " placeholder="&lt;--------&gt;">
+    </div>
+
+    <!-- <get> time -->
+    <div id="tempoaba" class="hidden bg-clip-text select-none
+      text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323">
+      <br>
+      <br>
+      <div id="clock" class="bg-clip-text select-none
+      text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323
+      text-8xl animate-pulse" onload="currentTime()">
+      </div>
+      <h1 class="text-2xl"><br>Mostrar na lateral: <span class="font-bold">&lt;<span id="clockon"
+            class="hover:cursor-pointer decoration-green-500">on</span>/<span id="clockoff"
+            class="hover:cursor-pointer underline decoration-green-500">off</span>&gt;</h1>
+
+    </div>
+
+
+
+    <div id="clean" class="hidden bg-clip-text select-none
+    text-transparent bg-gradient-to-r from-green-400 to-green-700 font-vt323">
+      <h1 class="text-2xl font-bold hover:cursor-pointer" id=""><br> &lt;limpar&gt;</h1>
+    </div>
+
+  </div>
+</body>
+
+</html>
